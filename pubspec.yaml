@@ -50,6 +50,11 @@ flutter:
   assets:
     - assets/background_1.jpg
     - assets/background_2.jpg
+    - assets/background_3.jpg
+    - assets/background_4.jpg
+    - assets/background_5.jpg
+    - assets/background_6.png
+    - assets/background_7.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
