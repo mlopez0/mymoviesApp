@@ -13,6 +13,7 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   bool _isLoading = false;
+  bool _valid = true;
   var errorMsg;
   final TextEditingController mailController = new TextEditingController();
   final TextEditingController passwordController = new TextEditingController();
@@ -70,6 +71,16 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                   ),
+                  _valid
+                      ? Center(child: Text(''))
+                      : Center(
+                          child: Text(
+                          'Invalid Credentials',
+                          style: TextStyle(
+                              color: Colors.red,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 25),
+                        )),
                   Padding(
                     padding: const EdgeInsets.only(
                         left: 0.0, right: 0.0, top: 30.0, bottom: 0.0),
@@ -94,16 +105,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       });
                       signIn(mailController.text, passwordController.text);
                     },
-
-/*              onPressed: () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => HomeScreen(),
-                  ),
-                ),
-              },
-  */
                   ),
                   Padding(
                     padding: const EdgeInsets.only(
@@ -122,16 +123,14 @@ class _LoginScreenState extends State<LoginScreen> {
     var jsonResponse = null;
     var response = await http.post("https://reqres.in/api/login", body: data);
     if (response.statusCode == 200) {
-      jsonResponse = json.decode(response.body);
+      jsonResponse = json.decode(response.body); //TOKEN
       print(jsonResponse);
       if (jsonResponse != null) {
         setState(() {
           _isLoading = false;
         });
-        //sharedPreferences.setString("token", jsonResponse['data']['token']);
-        userSave.token = jsonResponse['data']['token'];
-        userSave.username = jsonResponse['data']['user']['name'];
-        //  sharedPref.save("user", userSave);
+        userSave.token = jsonResponse['token'];
+        userSave.username = data['email'];
         Navigator.of(context).pushAndRemoveUntil(
             MaterialPageRoute(builder: (BuildContext context) => HomeScreen()),
             (Route<dynamic> route) => false);
@@ -139,8 +138,10 @@ class _LoginScreenState extends State<LoginScreen> {
     } else {
       setState(() {
         _isLoading = false;
+        _valid = false;
       });
       errorMsg = response.body;
+//      _valid = true;
       print("The error message is: ${response.body}");
     }
   }

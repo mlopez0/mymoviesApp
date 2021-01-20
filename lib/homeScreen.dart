@@ -12,6 +12,14 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        /*       backgroundColor: Colors.white60,
+      appBar: AppBar(
+        title: Text('Image Picker Example'),
+        centerTitle: true,
+        backgroundColor: Colors.green[800],
+      ),
+ */
+
         body: Container(
       constraints: BoxConstraints.expand(),
       decoration: BoxDecoration(
