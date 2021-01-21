@@ -27,11 +27,12 @@ flutter run
 
 ### Login Screen ###
 
-<img src="/demoImages/LogIn_Page.jpg" width="30%" height="30%">
-<img src="/demoImages/LogIn_Invalid_Page.jpg" width="30%" height="30%">
+| Login     | Invalid Login |
+| ---      | ---       |
+| <img src="/demoImages/LogIn_Page.jpg" width="100%" height="100%"> |<img src="/demoImages/LogIn_Invalid_Page.jpg" width="100%" height="100%">|
 
 ### Home Screen ###
-<img src="/demoImages/Home_Page.jpg" width="30%" height="30%">
+<img src="/demoImages/Home_Page.jpg" width="50%" height="50%">
 
 ### Search Screen ###
 
