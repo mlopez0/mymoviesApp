@@ -32,9 +32,18 @@ flutter run
 | <img src="/demoImages/LogIn_Page.jpg" width="100%" height="100%"> |<img src="/demoImages/LogIn_Invalid_Page.jpg" width="100%" height="100%">|
 
 ### Home Screen ###
-<img src="/demoImages/Home_Page.jpg" width="50%" height="50%">
+
+| HomeScreen     | Search Screen | Seach Keyboard |
+| ---      | ---       | ---       |
+| <img src="/demoImages/Home_Page.jpg" width="100%" height="100%"> |<img src="/demoImages/Home_Page_Search_1.jpg" width="100%" height="100%">|<img src="/demoImages/Home_Page_Search_2.jpg" width="100%" height="100%">|
+
 
 ### Search Screen ###
+
+| Search Result     | Other |
+| ---      | ---       |
+| <img src="/demoImages/Search_Page.jpg.jpg" width="100%" height="100%"> |<img src="/demoImages/Search_Page.jpg.jpg" width="100%" height="100%">|
+
 
 ## Background Credits ###
 
