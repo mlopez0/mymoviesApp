@@ -1,5 +1,10 @@
-# mymoviesApp
-Small Movies App developed with Flutter and developed within 48 hours
+# MyMoviesApp
+
+## Description ##
+
+- Login Screen: The first screen would be a Login screen with an email and password field.
+- Home Screen: Once the user is authenticated, the next screen would be the Home screen. This screen will have a top bar with a search textbox and button/icon. Then in the main body a list of Current Popular Movies are displayed
+- Search Screen: The user will enter a search query for a movie name at the top search Textbox and button/icon. A new screen opens and do a lookup in the api for all movies (not just popular movies) that have that query string in their name and show the list of movies.
 
 ### App Demo ###
 
