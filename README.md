@@ -31,17 +31,20 @@ flutter run
 
 ### Home Screen ###
 
-| HomeScreen     | Search Screen | Seach Keyboard |
-| ---      | ---       | ---       |
-| <img src="/demoImages/Home_Page.jpg" width="100%" height="100%"> |<img src="/demoImages/Home_Page_Search_1.jpg" width="100%" height="100%">|<img src="/demoImages/Home_Page_Search_2.jpg" width="100%" height="100%">|
+<img src="/demoImages/Home_Page.jpg" width="100%" height="100%">
+
+| Search Screen | Seach Keyboard |
+| ---       | ---       |
+|<img src="/demoImages/Home_Page_Search_1.jpg" width="100%" height="100%">|<img src="/demoImages/Home_Page_Search_2.jpg" width="100%" height="100%">|
 
 
 ### Search Screen ###
 
-| Search Result     | Other |
-| ---      | ---       |
-| <img src="/demoImages/Search_Page.jpg" width="100%" height="100%"> |<img src="/demoImages/Search_Page.jpg" width="100%" height="100%">|
+<img src="/demoImages/Search_Page.jpg" width="50%" height="50%">
 
+### Video Demo ###
+
+(/demoImages/demoVideo.gif)]
 
 ## Background Credits ###
 
