@@ -69,7 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
 //                  print('search');
                 } else {
                   this.cusIcon = Icon(Icons.search);
-                  this.cusSearchBar = Text("App Bar");
+                  this.cusSearchBar = Text("Movie App");
                 }
               });
             },

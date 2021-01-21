@@ -34,45 +34,39 @@ class _SearchScreenState extends State<SearchScreen> {
   Widget build(BuildContext context) {
     getDataSearch(movie2search);
     return Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          backgroundColor: Colors.yellow[700],
-          title: Text(movie2search),
-        ),
-        body: Container(
-          constraints: BoxConstraints.expand(),
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage("assets/background_5.jpg"),
-                  fit: BoxFit.cover)),
-          child: Container(
-            constraints: BoxConstraints.expand(),
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("assets/background_5.jpg"),
-                    fit: BoxFit.cover)),
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Expanded(
-                    child: ListView.builder(
-                        itemCount: movies == null ? 0 : movies.length,
-                        itemBuilder: (context, i) {
-                          return FlatButton(
-                            child: MovieCell(movies, i),
-                            padding: const EdgeInsets.all(0.0),
-                            onPressed: () {},
-                            color: Colors.transparent,
-                          );
-                        }),
-                  )
-                ],
-              ),
-            ),
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: Colors.yellow[700],
+        title: Text(movie2search),
+      ),
+      body: Container(
+        constraints: BoxConstraints.expand(),
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/background_5.jpg"),
+                fit: BoxFit.cover)),
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Expanded(
+                child: ListView.builder(
+                    itemCount: movies == null ? 0 : movies.length,
+                    itemBuilder: (context, i) {
+                      return FlatButton(
+                        child: MovieCell(movies, i),
+                        padding: const EdgeInsets.all(0.0),
+                        onPressed: () {},
+                        color: Colors.transparent,
+                      );
+                    }),
+              )
+            ],
           ),
-        ));
+        ),
+      ),
+    );
   }
 }
 
@@ -81,7 +75,7 @@ Future<Map> getJsonSearch(movie2search) async {
   var url =
       'https://api.themoviedb.org/3/discover/movie?api_key=$apiKey&query=$movie2search';
   var url2 =
-      'https://api.themoviedb.org/3/search/movie?api_key=d8bbf1ac3f8cf7cab0d4b6d6a1881999&query=venom';
+      'https://api.themoviedb.org/3/search/movie?api_key=d8bbf1ac3f8cf7cab0d4b6d6a1881999&query=minion';
 
   var response = await http.get(url2);
 

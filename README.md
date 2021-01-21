@@ -17,8 +17,6 @@ String getApiKey() {
 
 ## How to run the application? ##
 
-  
-
 ```
 flutter run
 ```
@@ -42,7 +40,7 @@ flutter run
 
 | Search Result     | Other |
 | ---      | ---       |
-| <img src="/demoImages/Search_Page.jpg" width="100%" height="100%"> |<img src="/demoImages/Search_Page.jpg.jpg" width="100%" height="100%">|
+| <img src="/demoImages/Search_Page.jpg" width="100%" height="100%"> |<img src="/demoImages/Search_Page.jpg" width="100%" height="100%">|
 
 
 ## Background Credits ###

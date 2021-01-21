@@ -12,10 +12,10 @@ class MovieTitle extends StatelessWidget {
       child: new Text(
         'Top Rated',
         style: new TextStyle(
-            fontSize: 40.0,
-            color: mainColor,
-            fontWeight: FontWeight.bold,
-            fontFamily: 'Arvo'),
+          fontSize: 40.0,
+          color: mainColor,
+          fontWeight: FontWeight.bold,
+        ),
         textAlign: TextAlign.left,
       ),
     );
