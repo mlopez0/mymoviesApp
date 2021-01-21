@@ -1,6 +1,11 @@
 # mymoviesApp
 Small Movies App developed with Flutter and developed within 48 hours
 
+### App Demo ###
+
+See the app live in the following video. Login, Top Movies and Search Option.
+
+<img src="/demoImages/demoVideo_compressed.gif" width="60%">
 
 
 ## Requirements ##
@@ -31,7 +36,7 @@ flutter run
 
 ### Home Screen ###
 
-<img src="/demoImages/Home_Page.jpg" width="100%" height="100%">
+<img src="/demoImages/Home_Page.jpg" width="50%" height="50%">
 
 | Search Screen | Seach Keyboard |
 | ---       | ---       |
@@ -42,9 +47,6 @@ flutter run
 
 <img src="/demoImages/Search_Page.jpg" width="50%" height="50%">
 
-### Video Demo ###
-
-(/demoImages/demoVideo.gif)]
 
 ## Background Credits ###
 
