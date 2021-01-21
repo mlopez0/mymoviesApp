@@ -20,6 +20,10 @@ class _HomeScreenState extends State<HomeScreen> {
   var movies;
   Color mainColor = Colors.black;
 
+  Icon cusIcon = Icon(Icons.search);
+  Widget cusSearchBar = Text("Movie App");
+  String movie2search;
+
   void getData() async {
     var data = await getJson();
 
@@ -35,18 +39,42 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
 //      backgroundColor: Colors.white,
       appBar: AppBar(
-        elevation: 0.3,
         centerTitle: true,
         backgroundColor: Colors.yellow[700],
-        title: Text(
-          'Movies App',
-          style: TextStyle(color: mainColor, fontWeight: FontWeight.bold),
-        ),
+        title: cusSearchBar,
         actions: <Widget>[
-          Icon(
-            Icons.search,
-            color: mainColor,
-          )
+          IconButton(
+            onPressed: () {
+              setState(() {
+                if (this.cusIcon.icon == Icons.search) {
+                  this.cusIcon = Icon(Icons.cancel);
+                  this.cusSearchBar = TextField(
+                    textInputAction: TextInputAction.go,
+                    decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: "Search your favorite movie"),
+                    style: TextStyle(color: Colors.white, fontSize: 16.0),
+                    onSubmitted: (term) {
+                      movie2search = term.toString();
+
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              SearchScreen(movie2search: movie2search),
+                        ),
+                      );
+                    },
+                  );
+//                  print('search');
+                } else {
+                  this.cusIcon = Icon(Icons.search);
+                  this.cusSearchBar = Text("App Bar");
+                }
+              });
+            },
+            icon: cusIcon,
+          ),
         ],
       ),
       body: Container(

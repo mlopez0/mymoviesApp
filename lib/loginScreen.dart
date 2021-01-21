@@ -26,7 +26,7 @@ class _LoginScreenState extends State<LoginScreen> {
       constraints: BoxConstraints.expand(),
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("assets/background_2.jpg"), fit: BoxFit.cover)),
+              image: AssetImage("assets/background_5.jpg"), fit: BoxFit.cover)),
       child: _isLoading
           ? Center(child: CircularProgressIndicator())
           : Center(

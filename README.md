@@ -33,6 +33,7 @@ flutter run
 ### Home Screen ###
 <img src="/demoImages/Home_Page.jpg" width="30%" height="30%">
 
+### Search Screen ###
 
 ## Background Credits ###
 
