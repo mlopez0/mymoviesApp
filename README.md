@@ -5,7 +5,7 @@ Small Movies App developed with Flutter and developed within 48 hours
 
 See the app live in the following video. Login, Top Movies and Search Option.
 
-<img src="/demoImages/demoVideo_compressed.gif" width="60%">
+<img src="/demoImages/demoVideo_compressed.gif" width="40%">
 
 
 ## Requirements ##
@@ -51,7 +51,3 @@ flutter run
 ## Background Credits ###
 
 All Background images are from https://pixabay.com under Pixabay license. https://pixabay.com/service/license/
-
-Users: 
-- Szabolcs Molnar
-- Skitterphoto
