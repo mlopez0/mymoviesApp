@@ -14,9 +14,11 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   bool _isLoading = false;
   bool _valid = true;
+  Color mainColor = Colors.black;
+
   var errorMsg;
-  final TextEditingController mailController = new TextEditingController();
-  final TextEditingController passwordController = new TextEditingController();
+  final TextEditingController mailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
   Credential userSave = Credential();
 
   @override
@@ -38,7 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: Text(
                         'My Movies',
                         style: TextStyle(
-                            color: Colors.black,
+                            color: mainColor,
                             fontWeight: FontWeight.bold,
                             fontSize: 50),
                       )),
@@ -53,6 +55,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       controller: mailController,
                       decoration: InputDecoration(
                         hintText: "E-mail",
+                        hintStyle: TextStyle(fontSize: 15.0, color: mainColor),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(30.0)),
                       ),
@@ -66,6 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       obscureText: true,
                       decoration: InputDecoration(
                         hintText: "Password",
+                        hintStyle: TextStyle(fontSize: 15.0, color: mainColor),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(30.0)),
                       ),
@@ -86,16 +90,18 @@ class _LoginScreenState extends State<LoginScreen> {
                         left: 0.0, right: 0.0, top: 30.0, bottom: 0.0),
                   ),
                   RaisedButton.icon(
-                    elevation: 10.0,
-                    color: Colors.grey[100],
+                    elevation: 0.0,
+                    color: Colors.transparent,
                     icon: Icon(
                       Icons.login,
                       color: Colors.black,
                     ),
-                    shape: RoundedRectangleBorder(
+                    shape: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30.0)),
                     label: Text('Log-in',
-                        style: TextStyle(fontSize: 20, color: Colors.black)),
+                        style: TextStyle(
+                          fontSize: 20,
+                        )),
                     padding: EdgeInsets.only(
                         top: 10.0, bottom: 10.0, right: 100.0, left: 100.0),
                     onPressed: () {
@@ -117,9 +123,8 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   signIn(String email, pass) async {
-    //SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
-//    Map data = {'email': email, 'password': pass};
-    Map data = {'email': "eve.holt@reqres.in", 'password': "cityslicka"};
+    Map data = {'email': email, 'password': pass};
+//    Map data = {'email': "eve.holt@reqres.in", 'password': "cityslicka"};
     var jsonResponse = null;
     var response = await http.post("https://reqres.in/api/login", body: data);
     if (response.statusCode == 200) {

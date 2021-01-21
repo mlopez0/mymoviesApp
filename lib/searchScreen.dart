@@ -72,12 +72,14 @@ class _SearchScreenState extends State<SearchScreen> {
 
 Future<Map> getJsonSearch(movie2search) async {
   var apiKey = getApiKey();
-  var url =
-      'https://api.themoviedb.org/3/discover/movie?api_key=$apiKey&query=$movie2search';
-  var url2 =
-      'https://api.themoviedb.org/3/search/movie?api_key=d8bbf1ac3f8cf7cab0d4b6d6a1881999&query=minion';
+  String parsed = movie2search;
+  parsed = parsed.replaceAll(' ', '&');
 
-  var response = await http.get(url2);
+  var url =
+      'https://api.themoviedb.org/3/search/movie?api_key=$apiKey&query=$parsed';
+
+  var response = await http.get(url);
+  print(url);
 
   return json.decode(response.body);
 }
