@@ -22,6 +22,12 @@ class _SearchScreenState extends State<SearchScreen> {
   String movie2search;
   _SearchScreenState(this.movie2search);
 
+  @override
+  void initState() {
+    super.initState();
+    getDataSearch(movie2search);
+  }
+
   void getDataSearch(movie2search) async {
     var data = await getJsonSearch(movie2search);
 
@@ -30,9 +36,11 @@ class _SearchScreenState extends State<SearchScreen> {
     });
   }
 
+//      getDataSearch(movie2search);
+
   @override
   Widget build(BuildContext context) {
-    getDataSearch(movie2search);
+//    getDataSearch(movie2search);
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -79,7 +87,6 @@ Future<Map> getJsonSearch(movie2search) async {
       'https://api.themoviedb.org/3/search/movie?api_key=$apiKey&query=$parsed';
 
   var response = await http.get(url);
-  print(url);
 
   return json.decode(response.body);
 }

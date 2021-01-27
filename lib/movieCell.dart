@@ -51,7 +51,9 @@ class MovieCell extends StatelessWidget {
                   ),
                   Padding(padding: const EdgeInsets.all(1.0)),
                   Text(
-                    movies[i]['release_date'],
+                    movies[i]['release_date'] == null
+                        ? '--'
+                        : movies[i]['release_date'],
                     style: TextStyle(
                       color: mainColor,
                     ),

@@ -24,6 +24,12 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget cusSearchBar = Text("Movie App");
   String movie2search;
 
+  @override
+  void initState() {
+    super.initState();
+    getData();
+  }
+
   void getData() async {
     var data = await getJson();
 
@@ -34,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    getData();
+//    getData();
 
     return Scaffold(
 //      backgroundColor: Colors.white,
@@ -113,5 +119,6 @@ Future<Map> getJson() async {
   var apiKey = getApiKey();
   var url = 'https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}';
   var response = await http.get(url);
+//  print(response.toString());
   return json.decode(response.body);
 }
